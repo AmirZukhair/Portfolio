@@ -22,13 +22,6 @@ const navListH = navList.getBoundingClientRect().height;
   
 })
 
-navBar.addEventListener('click', function(e){
-
- 
-  navBar.classList.remove('active');
-
- 
-})
 
 
 window.addEventListener('scroll',function(e){
@@ -61,6 +54,10 @@ navList.addEventListener('click',function(e){
 })
 
 
+
+
+
+
    /*
 
   window.addEventListener('scroll', event => {
@@ -91,4 +88,3 @@ navList.addEventListener('click',function(e){
 
 */
 
-}

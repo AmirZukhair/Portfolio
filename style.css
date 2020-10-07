@@ -304,7 +304,7 @@ color: #4F4FD9;
  .contact-form  textarea{
  	padding: 5px;
  	margin: 10px 0;
- 	overflow-x: hidden;
+ 	
  	resize: none;
  	border: 2px solid #000;
  }
@@ -353,9 +353,7 @@ color: #4F4FD9;
 		height: 100%;
 	}
 	/*NAVIGATION*/
-	body.lock{
-		overflow: hidden;
-	}
+	
 	.nav-bar{
 		height: 0;
 		 overflow: hidden;
