@@ -3,11 +3,12 @@ window.onload =() =>{
 
 const burger = document.querySelector('.burger-menu');
 const navBar = document.querySelector('.nav-bar');
-const lock = document.querySelector('body');
+
 
 const navList = document.querySelector('.nav-list');
 
 burger.addEventListener('click', function(){
+  
   burger.classList.toggle('active');
   
 const navbarH = navBar.getBoundingClientRect().height;
@@ -25,8 +26,8 @@ navBar.addEventListener('click', function(e){
 
  
   navBar.classList.remove('active');
-  burger.classList.remove('active');
-  lock.classList.remove('lock');
+
+ 
 })
 
 
@@ -51,7 +52,9 @@ navList.addEventListener('click',function(e){
   let target = e.target;
   if(target.tagName === 'A'){
     links.forEach(lnk=>{
+       burger.classList.remove('active');
          lnk.classList.remove('active-lnk');
+          navBar.style.height = 0;
   })
     target.classList.add('active-lnk')
   }
