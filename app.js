@@ -53,6 +53,85 @@ navList.addEventListener('click',function(e){
   }
 })
 
+const containerPrt = document.querySelector('.portfolio__inner');
+const portfolio__btns = document.querySelector('.portfolio__btns');
+
+const info = [
+{src: 'img/portfolio_img6.jpg', type: 'Website'},
+
+{src: 'img/portfolio_img4.jpg' , type: 'JavaScript'},
+
+{src: 'img/portfolio_img2.jpg' , type: 'Website'},
+
+{src: 'img/portfolio_img3.jpg' , type: 'Website'},
+
+{src: 'img/portfolio_img1.jpg' , type: 'Website'},
+
+{src: 'img/portfolio_img5.jpg' , type: 'Other'},
+
+];
+
+showButtons = () => {
+  let rdx = info.reduce((values,item)=>{
+  if(!values.includes(item.type)){
+    values.push(item.type);
+  }
+  return values;
+},['all']);
+
+let mapRdx = rdx.map(item=>{
+  return `
+  <div class='hide'>
+  <button data-id=${item} class="btn__type">${item}</button>
+  </div>
+  `
+}).join(' ');
+
+portfolio__btns.innerHTML = mapRdx;
+
+}
+showButtons();
+
+
+
+let btnsType = document.querySelectorAll('.btn__type');
+
+btnsType.forEach(btn=>{
+  btn.addEventListener('click',function(e){
+
+    let target = e.currentTarget.dataset.id;
+
+    let filterOn = info.filter(f=>{
+      if(target == f.type){
+        return f;
+      }
+    })
+
+    if(target == 'all'){
+      showTypes(info);
+    } else{
+       showTypes(filterOn);
+    }
+
+
+  })
+})
+
+
+showTypes =(inf)=>{
+
+  let mapping = inf.map(item=>{
+  return `<div class="portfolio-item" data-id=${item.type}>
+          <img src=${item.src}>
+            <div class="behind"><a class="behind-btn" href="https://amirzukhair.github.io/vanila-js/index.html/">View Website</a></div>
+        </div>`
+}).join(' ');
+
+containerPrt.innerHTML = mapping;
+
+}
+
+showTypes(info);
 
 
 }

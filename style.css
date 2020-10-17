@@ -329,6 +329,23 @@ color: #4F4FD9;
 
 
 
+.portfolio__btns{
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.btn__type {
+    padding: 7px 4px;
+    background-color: #4F4FD9;
+    font-size: 14px;
+    font-weight: 500;
+    width: 10vw;
+    margin: 0 4px;
+    border: solid 2px black;
+}
+
+
 
 @media(max-width: 971px){
 	.top__photo{
@@ -338,11 +355,23 @@ color: #4F4FD9;
 		grid-template-columns: 1fr;
 
 	}
+
+	.btn__type {
+  
+    width: 12vw;
+   
+}
 }
 
 
 
 @media (max-width: 768px) {
+
+	.btn__type {
+  
+    width: 15vw;
+   
+}
 	.top__wrapper{
 		grid-template-columns: 1fr;
 	}
@@ -402,6 +431,15 @@ color: #4F4FD9;
 
 
 @media (max-width: 558px){
+
+	.btn__type {
+  
+    width: 23vw;
+    font-size: 12px;
+    margin: 0  2px;
+    padding: 2px 4px;
+   
+}
 	.top {
     padding: 88px 0 0 0;
 }
