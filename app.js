@@ -57,17 +57,20 @@ const containerPrt = document.querySelector('.portfolio__inner');
 const portfolio__btns = document.querySelector('.portfolio__btns');
 
 const info = [
-{src: 'img/portfolio_img6.jpg', type: 'Website'},
+{src: 'img/portfolio_img6.jpg', type: 'Website', link: 'https://amirzukhair.github.io/website-surf/'},
 
-{src: 'img/portfolio_img4.jpg' , type: 'JavaScript'},
+{src: 'img/portfolio_img4.jpg' , type: 'JavaScript', link: 'https://amirzukhair.github.io/vanila-js/index.html/'},
 
-{src: 'img/portfolio_img2.jpg' , type: 'Website'},
+{src: 'img/portfolio_img7.jpg' , type: 'Other', link: 'https://amirzukhair.github.io/PokemonsAPI/'},
 
-{src: 'img/portfolio_img3.jpg' , type: 'Website'},
+{src: 'img/portfolio_img3.jpg' , type: 'Website', link: 'https://amirzukhair.github.io/website-Atlas-Concorde/'},
 
-{src: 'img/portfolio_img1.jpg' , type: 'Website'},
+{src: 'img/portfolio_img1.jpg' , type: 'Website', link: 'https://amirzukhair.github.io/Zebra-Lending-website/'},
 
-{src: 'img/portfolio_img5.jpg' , type: 'Other'},
+{src: 'img/portfolio_img5.jpg' , type: 'Other', link: 'https://amirzukhair.github.io/Responsive-Navigation/'},
+
+{src: 'img/portfolio_img2.jpg' , type: 'Website', link: 'https://amirzukhair.github.io/Landing-page-start-up/'},
+
 
 ];
 
@@ -123,7 +126,7 @@ showTypes =(inf)=>{
   let mapping = inf.map(item=>{
   return `<div class="portfolio-item" data-id=${item.type}>
           <img src=${item.src}>
-            <div class="behind"><a class="behind-btn" href="https://amirzukhair.github.io/vanila-js/index.html/">View Website</a></div>
+            <div class="behind"><a class="behind-btn" href=${item.link}>View Website</a></div>
         </div>`
 }).join(' ');
 
