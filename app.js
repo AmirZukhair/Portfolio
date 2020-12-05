@@ -1,7 +1,6 @@
-window.onload =() =>{
+window.addEventListener('DOMContentLoaded',() =>{
 
-
-const burger = document.querySelector('.burger-menu');
+  const burger = document.querySelector('.burger-menu');
 const navBar = document.querySelector('.nav-bar');
 
 
@@ -61,13 +60,13 @@ const info = [
 
 {src: 'img/portfolio_img4.jpg' , type: 'JavaScript', link: 'https://amirzukhair.github.io/vanila-js/index.html/'},
 
-{src: 'img/portfolio_img7.jpg' , type: 'Other', link: 'https://amirzukhair.github.io/PokemonsAPI/'},
+{src: 'img/portfolio_img7.jpg' , type: 'React', link: 'https://amirzukhair.github.io/PokemonsAPI/'},
 
 {src: 'img/portfolio_img3.jpg' , type: 'Website', link: 'https://amirzukhair.github.io/website-Atlas-Concorde/'},
 
 {src: 'img/portfolio_img1.jpg' , type: 'Website', link: 'https://amirzukhair.github.io/Zebra-Lending-website/'},
 
-{src: 'img/portfolio_img5.jpg' , type: 'Other', link: 'https://amirzukhair.github.io/Responsive-Navigation/'},
+{src: 'img/portfolio_img5.jpg' , type: 'Website', link: 'https://amirzukhair.github.io/Responsive-Navigation/'},
 
 {src: 'img/portfolio_img2.jpg' , type: 'Website', link: 'https://amirzukhair.github.io/Landing-page-start-up/'},
 
@@ -136,37 +135,13 @@ containerPrt.innerHTML = mapping;
 
 showTypes(info);
 
+}) 
 
-}
 
 
-   /*
 
-  window.addEventListener('scroll', event => {
-  let links = document.querySelectorAll('.nav-list li a');
-  let windowOffsetY = window.scrollY;
 
-  links.forEach(link => {
-     const refValue = link.getAttribute("href").slice(1);
-     const block = document.getElementById(refValue);
 
-     if(!block){
-      return;
-     }
 
-   
-    if (
-      block.offsetTop <= windowOffsetY &&
-      block.offsetTop + block.getBoundingClientRect().height - 10 > windowOffsetY
-    ) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-    
-    
-  });
-});
 
-*/
 
