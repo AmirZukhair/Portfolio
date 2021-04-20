@@ -27,8 +27,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   darkMode.addEventListener('click', function () {
+    darkMode.children[0].classList.toggle('active');
+    darkMode.children[1].classList.toggle('active');
     body.classList.toggle('dark');
-
   })
 
 
@@ -51,7 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let links = document.querySelectorAll('.nav-list li a');
   navList.addEventListener('click', function (e) {
     let target = e.target;
-    if (target.tagName === 'A') {
+    if (target.tagName === 'A' && body.getBoundingClientRect().width < 768) {
       links.forEach(lnk => {
         burger.classList.remove('active');
         lnk.classList.remove('active-lnk');
