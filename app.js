@@ -68,7 +68,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const info = [
     { src: 'img/portfolio_img6.jpg', type: 'Website', link: 'https://amirzukhair.github.io/website-surf/' },
     
-    
+    { src: 'img/portfolio_img9.png', type: 'React', link: 'https://heuristic-johnson-3a4f17.netlify.app/' },
+
      { src: 'img/portfolio_img8.png', type: 'Website', link: 'https://www.rooms.te.ua/' },
 
     { src: 'img/portfolio_img4.jpg', type: 'JavaScript', link: 'https://amirzukhair.github.io/vanila-js/index.html/' },
