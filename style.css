@@ -151,6 +151,10 @@ color: #4F4FD9;
 	padding-bottom: 10px;
 	font-weight: 700;
 }
+.title h1{
+	display: inline-block;
+        font-size: inherit;
+}
 .subtitle{
 	font-weight: 600;
 	padding-bottom: 13px;
