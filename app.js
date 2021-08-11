@@ -1,3 +1,8 @@
+window.addEventListener('click', ()=> {
+  console.log(navigator.bluetooth)
+})
+
+
 window.addEventListener('DOMContentLoaded', () => {
 
   const burger = document.querySelector('.burger-menu');
