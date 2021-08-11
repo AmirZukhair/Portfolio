@@ -3,12 +3,8 @@ html{
 	scroll-behavior: smooth;
 }
 body{
-	font-display: swap;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 17px;
-	/*background-color: #ffffff;*/
-   
-	
 }
 body.dark{
 	background-color: rgb(13, 17, 23);
