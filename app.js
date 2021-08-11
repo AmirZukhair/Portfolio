@@ -1,3 +1,8 @@
+window.addEventListener('click', ()=> {
+  console.log(navigator.bluetooth)
+})
+
+
 window.onload =() =>{
 
 
