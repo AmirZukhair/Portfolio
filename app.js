@@ -1,9 +1,4 @@
 
-
-
-window.onload =() =>{
-
-
 window.addEventListener('DOMContentLoaded', () => {
 
   const burger = document.querySelector('.burger-menu');
@@ -165,5 +160,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-}
+
+
 
