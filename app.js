@@ -1,96 +1,169 @@
-window.addEventListener('click', ()=> {
-  console.log(navigator.bluetooth)
-})
+
 
 
 window.onload =() =>{
 
 
-const burger = document.querySelector('.burger-menu');
-const navBar = document.querySelector('.nav-bar');
-const lock = document.querySelector('body');
+window.addEventListener('DOMContentLoaded', () => {
 
-const navList = document.querySelector('.nav-list');
+  const burger = document.querySelector('.burger-menu');
+  const navBar = document.querySelector('.nav-bar');
 
-burger.addEventListener('click', function(){
-  burger.classList.toggle('active');
+
+  const navList = document.querySelector('.nav-list');
+
+  burger.addEventListener('click', function () {
+
+    burger.classList.toggle('active');
+
+    const navbarH = navBar.getBoundingClientRect().height;
+    const navListH = navList.getBoundingClientRect().height;
+    if (navbarH === 0) {
+      navBar.style.height = `${navListH}px`;
+    }
+    else {
+      navBar.style.height = 0;
+    }
+
+  })
+
+  const body = document.querySelector('body');
+  const darkMode = document.querySelector('.dark__mode');
   
-const navbarH = navBar.getBoundingClientRect().height;
-const navListH = navList.getBoundingClientRect().height;
-  if(navbarH === 0){
-     navBar.style.height = `${navListH}px`;
-  }
-  else{
-    navBar.style.height = 0;
-  }
-  
-})
-
-navBar.addEventListener('click', function(e){
-
- 
-  navBar.classList.remove('active');
-  burger.classList.remove('active');
-  lock.classList.remove('lock');
-})
 
 
-window.addEventListener('scroll',function(e){
-  const header = document.getElementById('header');
-  const headerH = header.getBoundingClientRect().height;
-  const position = window.pageYOffset;
- 
- 
-  if(position >= headerH / 2){
-    header.classList.add('fixed');
-   
-  } else{
+  darkMode.addEventListener('click', function () {
+    darkMode.children[0].classList.toggle('active');
+    darkMode.children[1].classList.toggle('active');
+    body.classList.toggle('dark');
+  })
+
+
+  window.addEventListener('scroll', function (e) {
+    const header = document.getElementById('header');
+    const headerH = header.getBoundingClientRect().height;
+    const position = window.pageYOffset;
+
+
+    if (position >= headerH / 2) {
+      header.classList.add('fixed');
+
+    } else {
       header.classList.remove('fixed');
 
-  }
+    }
 
   });
 
-let links = document.querySelectorAll('.nav-list li a');
-navList.addEventListener('click',function(e){
-  let target = e.target;
-  if(target.tagName === 'A'){
-    links.forEach(lnk=>{
-         lnk.classList.remove('active-lnk');
+  let links = document.querySelectorAll('.nav-list li a');
+  navList.addEventListener('click', function (e) {
+    let target = e.target;
+    if (target.tagName === 'A' && body.getBoundingClientRect().width < 768) {
+      links.forEach(lnk => {
+        burger.classList.remove('active');
+        lnk.classList.remove('active-lnk');
+        navBar.style.height = 0;
+      })
+      target.classList.add('active-lnk')
+    }
   })
-    target.classList.add('active-lnk')
+
+  const containerPrt = document.querySelector('.portfolio__inner');
+  const portfolio__btns = document.querySelector('.portfolio__btns');
+
+  const info = [
+    { src: 'img/portfolio_img6.jpg', type: 'Website', link: 'https://amirzukhair.github.io/website-surf/' },
+    
+    { src: 'img/portfolio_img9.png', type: 'React', link: 'https://heuristic-johnson-3a4f17.netlify.app/' },
+
+     { src: 'img/portfolio_img8.png', type: 'Website', link: 'https://www.rooms.te.ua/' },
+
+    { src: 'img/portfolio_img4.jpg', type: 'JavaScript', link: 'https://amirzukhair.github.io/vanila-js/index.html/' },
+
+    { src: 'img/portfolio_img7.jpg', type: 'React', link: 'https://amirzukhair.github.io/PokemonsAPI/' },
+
+    { src: 'img/portfolio_img3.jpg', type: 'Website', link: 'https://amirzukhair.github.io/website-Atlas-Concorde/' },
+
+    { src: 'img/portfolio_img1.jpg', type: 'Website', link: 'https://amirzukhair.github.io/Zebra-Lending-website/' },
+
+    { src: 'img/portfolio_img5.jpg', type: 'Website', link: 'https://amirzukhair.github.io/Responsive-Navigation/' },
+
+    { src: 'img/portfolio_img2.jpg', type: 'Website', link: 'https://amirzukhair.github.io/Landing-page-start-up/' },
+
+
+  ];
+
+  showButtons = () => {
+    let rdx = info.reduce((values, item) => {
+      if (!values.includes(item.type)) {
+        values.push(item.type);
+      }
+      return values;
+    }, ['all']);
+
+    let mapRdx = rdx.map(item => {
+      return `
+  <div class='hide'>
+  <button data-id=${item} class="btn__type">${item}</button>
+  </div>
+  `
+    }).join(' ');
+
+    portfolio__btns.innerHTML = mapRdx;
+
   }
+  showButtons();
+
+
+
+  let btnsType = document.querySelectorAll('.btn__type');
+
+  btnsType.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+
+      let target = e.currentTarget.dataset.id;
+
+      let filterOn = info.filter(f => {
+        if (target == f.type) {
+          return f;
+        }
+      })
+
+      if (target == 'all') {
+        showTypes(info);
+      } else {
+        showTypes(filterOn);
+      }
+
+
+    })
+  })
+
+
+  showTypes = (inf) => {
+
+    let mapping = inf.map(item => {
+      return `<a  href=${item.link}>
+            <div class="portfolio-item" data-id=${item.type}>
+          <img src=${item.src}>
+       
+           
+        </div>
+        </a>`
+    }).join(' ');
+
+    containerPrt.innerHTML = mapping;
+
+  }
+
+  showTypes(info);
+
 })
 
 
-   /*
 
-  window.addEventListener('scroll', event => {
-  let links = document.querySelectorAll('.nav-list li a');
-  let windowOffsetY = window.scrollY;
 
-  links.forEach(link => {
-     const refValue = link.getAttribute("href").slice(1);
-     const block = document.getElementById(refValue);
 
-     if(!block){
-      return;
-     }
-
-   
-    if (
-      block.offsetTop <= windowOffsetY &&
-      block.offsetTop + block.getBoundingClientRect().height - 10 > windowOffsetY
-    ) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-    
-    
-  });
-});
-
-*/
 
 }
+

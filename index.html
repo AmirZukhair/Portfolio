@@ -1,138 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Amir Zukhair</title>
-	<link rel="shortcut icon" type="image/png" href="img/calcifer.png"/>
-	<link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="img/calcifer.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 	
 
-	<header id="header">
-		<div class="container">
-			<div class="header__wrapper">
-       <div class="hb-wr">
-		<div class="header-logo">
+		<header id="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<div class="hb-wr">
+						<div class="header-logo">
+
+							Amir<span class="point-spn">.</span>
+
+						</div>
+						<div class="burger-menu">
+							<span></span>
+						</div>
+					</div>
+					<nav class="nav-bar">
+						<ul class="nav-list">
+							<li><a href="#s1" data-id="bla">Hello</a></li>
+							<li><a href="#s2" data-id="bla">Skills</a></li>
+							<li><a href="#s3" data-id="bla">portfolio</a></li>
+							<li><a href="#s4" data-id="bla">Contact</a></li>
+
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<section class="top" id="s1">
+			<div class="container">
+				<div class="top__wrapper">
+					<div class="top__content">
+						<div class="title__wrapper">
+							<div class="title"><h1>I'm Amir Zukhair</h1><span class="point-spn">.</span></div>
+							<div class="dark__mode">
+								<img title="lite" src="img/moon1.png" alt="moon" class="dark__mode-img">
+								<img title="night" src="img/moon2.png" alt="moon" class="dark__mode-img active">
+
+							</div>
+						</div>
+						<div class="subtitle">I am a junior Front-end Developer located in Ukraine, Ternopil. I
+							currently
+							practice skills in React&Redux to build big projects. I am looking to take on more work and
+							to
+							increase my skills as a Web Developer.</div>
+						<div class="contacts phone"> PHONE <span class="details"><a href="tel:+380 99 253 80 99">+380 99 253 80 99</a></span></div>
+						<div class="contacts email"> EMAIL <span class="details"><a href="mailto:amirzukhair@gmail.com">amirzukhair@gmail.com</a></span></div>
+						<div class="contacts socials">
+							SOCIAL
+							<a href="https://www.facebook.com/profile.php?id=100009745516302"><img
+									src="img/facebook.png" /></a>
+							<a href="https://www.instagram.com/amr_zkhr/"><img src="img/instagram.png" /></a>
+							<a href="https://github.com/AmirZukhair"><img src="img/github.png" /></a>
+						</div>
+
+
+						<div class="skills" id="s2">
+
+
+							<div class="skills__title title">Skills<span class="point-spn">.</span></div>
+							<div class="skills__box">
+								<img src="img/html.png">
+								<img src="img/css.png">
+								<img src="img/js.png">
+								<img src="img/react.png">
+							</div>
+
+							<div class="skills__subtitle">
+
+								<div class="skills__category">UI\UX Design: <span> Photoshop, Figma, Sketch, Adobe XD.
+									</span></div>
+
+								<div class="skills__category">frameworks and libraries: <span>React,Redux,Jquery.
+									</span>
+								</div>
+								<div class="skills__category"> technologies and tools:
+									<span>Bootstrap,Scss,Gulp,Responsive
+										& Adaptive, WordPress, OpenCart. <span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+					<div class="top__photo">
+						<picture>
+							<source media="(max-width: 971px)" srcset="img/robot-mini.png">
+
+							<img src="img/pngegg.png">
+						</picture>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+		<section class="portfolio" id="s3">
+			<div class="container">
+				<div class="portfolio-title title">Portfolio<span class="point-spn">.</span></div>
+
+				<div class="portfolio__btns">
+
+				</div>
+				<div class="portfolio__inner">
+					<!--dynamic -->
+
+				</div>
+			</div>
+		</section>
+
+
+		<section class="contact" id="s4">
+			<div class="container">
+				<div class="contact__wrapper">
+					<div class="contact__text">
+						<div class="title">Get in touch<span class="point-spn">.</span></div>
+						<div class="contact__subtitle">Are you working on something great? I would love to help make it
+							happen! Drop me a letter and start your project right now! Just do it.</div>
+					</div>
+
+
+					<form class="contact-form" action="" data-netlify="true">
+						<label>Contact me</label>
+						<input placeholder="Name" type="text" name="name" id="form-name" required>
+
+						<input placeholder="E-mail" type="email" name="email" id="form-email" required>
+
+
+						<textarea wrap="off" name="textarea" rows="5" cols="50" placeholder="Message here..."
+							id="form-message" required></textarea>
+
+
+
+						<button type="subtitle">Send Message</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+
 			
-				Amir<span class="point-spn">.</span>
 			
-		</div>
-		<div class="burger-menu">
-			<span></span>
-		</div>
-		</div>
-		<nav class="nav-bar">
-			<ul class="nav-list">
-				<li><a href="#s1"  data-id="bla">Hello</a></li>
-				<li><a href="#s2" data-id="bla">Skills</a></li>
-				<li><a href="#s3" data-id="bla">portfolio</a></li>
-				<li><a href="#s4" data-id="bla">Contact</a></li>
-				
-			</ul>
-		</nav>
-		</div>
-		</div>
-	</header>
-
-	<section class="top" id="s1">
-		<div class="container">
-            <div class="top__wrapper">
-		<div class="top__content">
-		<div class="title">I'm Amir Zukhair <span class="point-spn">.</span></div>
-		<div class="subtitle">I am a junior Front-end Developer located in Ukraine, Ternopil. I currently practice skills in React&Redux to build big projects. I am looking to take on more work and to increase my skills as a Web Developer.</div>
-		<div class="contacts phone"> PHONE <span class="details">+380 99 253 80 99</span></div>
-		<div class="contacts email"> EMAIL <span class="details">amirzukhair@gmail.com</span></div>
-		<div class="contacts socials">
-			SOCIAL		
-			<a href="https://www.facebook.com/profile.php?id=100009745516302"><img src="img/facebook.png" /></a>
-			<a href="https://www.instagram.com/amr_zkhr/"><img src="img/instagram.png" /></a>
-			<a href="https://github.com/AmirZukhair"><img src="img/github.png" /></a>	
-		</div> 
-
-
-		<div class="skills" id="s2">
-		
 			
-				<div class="skills__title title">Skills<span class="point-spn">.</span></div>
-				<div class="skills__box">
-                      <img src="img/html.png">
-                      <img src="img/css.png">
-                       <img src="img/js.png">
-                         <img src="img/react.png">
-				</div>
-
-				<div class="skills__subtitle">
-
-					<div class="skills__category">UI\UX Design: <span> Photoshop, Figma, Sketch. </span></div>
-					
-					<div class="skills__category">frameworks and libraries: <span>React,Redux,Jquery. </span> </div>
-                  <div class="skills__category">  technologies and tools:  <span>Bootstrap,Scss,Gulp. <span></div>
-				</div>
-        	</div>
-		
-		</div>
 
 
-		<div class="top__photo"><picture>
- <source media="(max-width: 971px)" srcset="img/robot-mini.png">
 
- <img src="img/pngegg.png">
-</picture></div>
-     </div>
-		</div>
-	</section>
-
-	
-
-	
-	<section class="portfolio" id="s3">
-		<div class="container">
-			<div class="portfolio-title title">Portfolio<span class="point-spn">.</span></div>
-			<div class="portfolio__inner">
-
-
-				<div class="portfolio-item">
-					<img src="img/portfolio_img6.jpg">
-					<div class="behind"><a class="behind-btn" href="https://amirzukhair.github.io/website-surf/">View Website</a></div>
-				</div>
-
-				<div class="portfolio-item">
-					<img src="img/portfolio_img4.jpg">
-						<div class="behind"><a class="behind-btn" href="https://amirzukhair.github.io/vanila-js/index.html/">View Website</a></div>
-				</div>
-
-
-				
-
-				<div class="portfolio-item">
-					<img src="img/portfolio_img2.jpg">
-						<div class="behind"><a class="behind-btn" href="https://amirzukhair.github.io/Landing-page-start-up/">View Website</a></div>
-				</div>
-
-
-				<div class="portfolio-item">
-					<img src="img/portfolio_img3.jpg">
-						<div class="behind"><a class="behind-btn" href="https://amirzukhair.github.io/website-Atlas-Concorde/">View Website</a></div>
-				</div>
-
-
-				<div class="portfolio-item">
-					<img src="img/portfolio_img1.jpg">
-						<div class="behind"><a class="behind-btn" href="https://amirzukhair.github.io/Zebra-Lending-website/">View Website</a></div>
-				</div>
-
-
-				<div class="portfolio-item">
-					<img src="img/portfolio_img5.jpg">
-						<div class="behind"><a class="behind-btn" href="https://amirzukhair.github.io/Responsive-Navigation/">View Website</a></div>
-				</div>
-
-
-				
+			<script src="app.js"></script>
+</body>
+ </html>
 
 				
 			</div>
@@ -174,3 +207,4 @@
 
 </html>
 <!-- Hello World -->
+
