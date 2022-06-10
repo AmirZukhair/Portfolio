@@ -116,6 +116,14 @@ window.addEventListener('DOMContentLoaded', () => {
   btnsType.forEach(btn => {
     btn.addEventListener('click', function (e) {
 
+      
+      btnsType.forEach(btns => {
+      btns.classList.remove('active');
+      })
+      
+      btn.classList.add('active');
+      
+      
       let target = e.currentTarget.dataset.id;
 
       let filterOn = info.filter(f => {
