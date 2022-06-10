@@ -67,23 +67,23 @@ window.addEventListener('DOMContentLoaded', () => {
   const portfolio__btns = document.querySelector('.portfolio__btns');
 
   const info = [
-    { src: 'img/portfolio_img6.jpg', type: 'Website', link: 'https://amirzukhair.github.io/website-surf/' },
+    { src: 'img/portfolio_img6.jpg', type: 'Websites', link: 'https://amirzukhair.github.io/website-surf/' },
     
     { src: 'img/portfolio_img9.png', type: 'React', link: 'https://heuristic-johnson-3a4f17.netlify.app/' },
 
-     { src: 'img/portfolio_img8.png', type: 'Website', link: 'https://www.rooms.te.ua/' },
+     { src: 'img/portfolio_img8.png', type: 'Websites', link: 'https://www.rooms.te.ua/' },
 
-    { src: 'img/portfolio_img4.jpg', type: 'JavaScript', link: 'https://amirzukhair.github.io/vanila-js/index.html/' },
+    { src: 'img/portfolio_img4.jpg', type: 'Others', link: 'https://amirzukhair.github.io/vanila-js/index.html/' },
 
     { src: 'img/portfolio_img7.jpg', type: 'React', link: 'https://amirzukhair.github.io/PokemonsAPI/' },
 
-    { src: 'img/portfolio_img3.jpg', type: 'Website', link: 'https://amirzukhair.github.io/website-Atlas-Concorde/' },
+    { src: 'img/portfolio_img3.jpg', type: 'Websites', link: 'https://amirzukhair.github.io/website-Atlas-Concorde/' },
 
-    { src: 'img/portfolio_img1.jpg', type: 'Website', link: 'https://amirzukhair.github.io/Zebra-Lending-website/' },
+    { src: 'img/portfolio_img1.jpg', type: 'Websites', link: 'https://amirzukhair.github.io/Zebra-Lending-website/' },
 
-    { src: 'img/portfolio_img5.jpg', type: 'Website', link: 'https://amirzukhair.github.io/Responsive-Navigation/' },
+    { src: 'img/portfolio_img5.jpg', type: 'Websites', link: 'https://amirzukhair.github.io/Responsive-Navigation/' },
 
-    { src: 'img/portfolio_img2.jpg', type: 'Website', link: 'https://amirzukhair.github.io/Landing-page-start-up/' },
+    { src: 'img/portfolio_img2.jpg', type: 'Websites', link: 'https://amirzukhair.github.io/Landing-page-start-up/' },
 
 
   ];
