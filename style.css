@@ -331,7 +331,9 @@ color: #4F4FD9;
     margin: 0 4px;
     border: solid 2px black;
 }
-
+.btn__type.active{
+ background-color: #dff145;
+}
 
 
 @media(max-width: 971px){
